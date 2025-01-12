@@ -1,13 +1,16 @@
-import Presentation from "./components/Presentation/Presentation";
+import Experience from './components/Experience/Experience';
+import Header from './components/Header/Header';
+import Section from './components/Section/Section';
+import { COLORS } from './layout/COLORS';
+import Intro from './sections/Intro';
 
 function App() {
   return (
     <>
-      <div className="absolute top-container">
-        <h1 className="top-title">{"< Júlio Nunes Tavares />"}</h1>
-      </div>
-      <div className="first-section" />
-      <Presentation />
+      <Header />
+      {/* <div className="first-section" /> */}
+      <Intro />
+      <Section children={<Experience />} backgroundColor={COLORS.backgrounLighter} />
     </>
   );
 }
