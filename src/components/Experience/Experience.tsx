@@ -1,5 +1,5 @@
-import { data } from './data';
-import * as Styled from './styles';
+import { data } from "./data";
+import * as Styled from "./styles";
 
 const Experience = () => {
   return (
@@ -8,7 +8,14 @@ const Experience = () => {
       {data.map((item, i) => {
         return (
           <div key={i}>
-            <p>{item.job}</p>
+            <div>
+              <p>
+                {item.job} - {item.place}
+              </p>
+              <p>
+                {item.startDate} - {item.endDate}
+              </p>
+            </div>
           </div>
         );
       })}

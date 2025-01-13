@@ -1,3 +1,5 @@
+import eu from '../../assets/eu.jpg'
+
 interface IData {
   title: string;
   description: string;
