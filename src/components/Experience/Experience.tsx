@@ -5,17 +5,23 @@ const Experience = () => {
   return (
     <Styled.MainContainer>
       <Styled.Title>Experiences</Styled.Title>
-      {data.map((item, i) => {
+
+      {data.info.map((item, i) => {
         return (
           <div key={i}>
-            <div>
+            <Styled.TitleContainer>
               <p>
                 {item.job} - {item.place}
               </p>
               <p>
                 {item.startDate} - {item.endDate}
               </p>
-            </div>
+            </Styled.TitleContainer>
+            <Styled.ListContainer>
+              {item.topics.map((topic, i) => {
+                return <p key={i}>{topic}</p>;
+              })}
+            </Styled.ListContainer>
           </div>
         );
       })}
